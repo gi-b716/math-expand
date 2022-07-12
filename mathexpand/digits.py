@@ -1,16 +1,25 @@
-def take_digits(number):
-    digits = list()
+def take_digits(number, return_type="l"):
+    digits_list = list()
+    digits_dict = {}
     temp = number
 
-    for i in range(len(str(number)) - 1):
+    for _ in range(len(str(number)) - 1):
         divisor = int("1" + (len(str(temp))-1) * "0")
-        digits.append(int((temp - temp % divisor) / divisor))
+        digits_list.append(int((temp - temp % divisor) / divisor))
+        digits_dict[divisor] = int((temp - temp % divisor) / divisor)
 
         temp = temp % divisor
 
-    digits.append(temp)
+    digits_list.append(temp)
+    digits_dict[1] = temp
 
-    return digits
+    if return_type=="l":
+        return digits_list
+    elif return_type=="d":
+        return digits_dict
+    else:
+        return "请传递正确的return_type实参(Please pass the correct return_type argument)"
 
-# print(take_digits(356486))
-# print(take_digits(6743526582638753426723483258236542836247356398))
+# print(take_digits(23532))
+# print(take_digits(36483, "l"))
+# print(take_digits(32543, "d"))
