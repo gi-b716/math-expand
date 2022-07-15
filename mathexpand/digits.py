@@ -18,7 +18,8 @@ def take_digits(number, return_type="l"):
     elif return_type=="d":
         return digits_dict
     else:
-        return "请传递正确的return_type实参(Please pass the correct return_type argument)"
+        print("请传递正确的return_type实参(Please pass the correct return_type argument)")
+        return digits_list
 
 # print(take_digits(23532))
 # print(take_digits(36483, "l"))
