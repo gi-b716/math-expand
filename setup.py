@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
  
 setuptools.setup(
     name="mathexpand", # 用自己的名替换其中的YOUR_USERNAME_
-    version="1.0.9",    #包版本号，便于维护版本
+    version="1.1.2",    #包版本号，便于维护版本
     author="GavinCQTD",    #作者，可以写自己的姓名
     author_email="gavingan2012@gmail.com",    #作者联系方式，可写自己的邮箱地址
     description="A math expand package",#包的简述
